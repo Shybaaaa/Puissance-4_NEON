@@ -6,14 +6,14 @@
 
 > Comment tester le jeu ? C'est simple !
 > 1. Vous installez le projet en format .ZIP
-> 2. Puis-vous le décompresser dans le dossier que vous désirer
+> 2. Ensuite, vous le décompressez dans le dossier que vous désirez
 > 3. Vous entrez dans le nouveau dossier et vous ouvrez `index.html`
-> 4. Et voilà bon teste à vous !
-
+> 4. Et voilà, bon test à vous !
 
 > [!NOTE]
 > Si vous désirez apporter des changements au code source, libre à vous.
-> Et si vous voulez proposer des améliorations, vous pouvez m'envoyer en MP
+> Et si vous voulez proposer des améliorations, vous pouvez me contacter en MP
+
 
 ---
 
