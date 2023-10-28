@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puissance 4 - Acceuil</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3>Puisssance 4</h3>
+    <div class="menu" id="menu">
+      <button onclick="CommencerSession();">Commencer</button>
+      <button onclick="AfficherMenuRegle();">Option du jeu</button>
+    </div>
+
+    <div class="regle hidden" id="reglement">
+      <div class="items">
+        <input type="range" list="tickmarks" value="4"
+          oninput="document.querySelectorAll('.countRange')[0].innerHTML = this.value; nombrePionAAlignes = this.value"
+          step="1" min="4" max="6" />
+        <span class="text"><span>Nombre de pions a aligné : <span class="countRange">4</span></span></span>
+      </div>
+
+      <div class="items">
+        <input type="range" list="tickmarks" value="2"
+          oninput="document.querySelectorAll('.countRange')[1].innerHTML = this.value; nombreJoueurEnJeux = this.value;"
+          step="1" min="2" max="4" />
+        <span class="text"><span>Nombre de joueurs : <span class="countRange">2</span></span></span>
+      </div>
+
+      <div class="items">
+        <input type="range" list="tickmarks" value="8"
+          oninput="document.querySelectorAll('.countRange')[2].innerHTML = this.value; tailleGrille = this.value;"
+          step="1" min="8" max="12" />
+        <span class="text"><span>Taille de la grille : <span class="countRange">8</span></span></span>
+      </div>
+    </div>
+    <!-- contenue tableau -->
+    <div id="grilleJeux"></div>
+    <!-- popup de fin de session -->
+    <div id="popup" class="hidden">
+      <div class="titre">
+        <h1 id="title-popup"></h1>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/timer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+// Importation
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300;400&display=swap');
+
+// Variable
+:root{
+  --font-dark: #171b1b;
+  --dark: #1a1f20;
+  --turquoise: #55d6be;
+  --white: #f5f3f5;
+  --red: #ff0e1e;
+  --yellow: #fbff00;
+  --blue: #0f056b;
+  --green: #34ff24; 
+  --cyan: #01baef;
+}
+
+
+// CSS
+// Mise en blanc de tous les textes
+* {
+  color: var(--white);
+}
+
+// Font noir sur l'arrière plan du jeu
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
+  z-index: 1;
+  background: var(--font-dark);
+}
+
+// hidden
+.hidden {
+  display: none;
+}
+
+// Centrage de la grille de jeu plus d'autres paramètres
+.container {
+  background: var(--dark);
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 5%;
+  border: 15px solid var(--dark);
+  padding: 10px;
+  padding-bottom: 2%;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+// Menu de départ
+h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 25px;
+  margin-bottom: 5%;
+  text-align: center;
+}
+// style de la popup de fin de session
+#popup{
+  position: absolute;
+  top: 25%;
+  left: calc((100vw - 50%) - 60vh);
+  width: 120vh;
+  height: 60vh;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.95)
+  );
+  border: 2px solid rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
+
+  h1 {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 250%;
+  }
+
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  button {
+    background: var(--turquoise);
+    border: 1px var(--turquoise) solid;
+    border-radius: 8px;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 3% 2% 3%;
+    cursor: pointer;
+    width: 50vw;
+  }
+  button:hover {
+    transition: 0.3s ease;
+    background-color: #43aa97;
+    border: 1px #43aa97 solid;
+  }
+}
+.regle {
+  display: none;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px white solid;
+  padding: 2%;
+  border-radius: 10px;
+  tr {
+    background: rgba($color: #f5f3f5, $alpha: 0);
+    td {
+      margin-left: 5px;
+      $tailleL: 60px;
+      background-color: var(--dark);
+      border: white 4px solid;
+      border-radius: 100%;
+      width: $tailleL;
+      height: $tailleL;
+      cursor: pointer;
+      transition:  width 0.3s, height 0.3s, border 0.3s;
+    }
+  }
+}
+
+// Couleur Pions
+.rouge { 
+  border: 4px solid var(--red);
+  background: radial-gradient(rgba(0,0,0,0) 38%, var(--red));
+  box-shadow: 1px 1px 20px 4px var(--red);
+  border-radius: 100%;
+}
+.jaune {
+  border: 4px solid var(--yellow);
+  background: radial-gradient(rgba(0,0,0,0) 38%, var(--yellow));
+  box-shadow: 1px 1px 20px 4px var(--yellow);
+  border-radius: 100%;
+}
+.cyan {
+  border: 4px solid var(--cyan);
+  background: radial-gradient(rgba(0,0,0,0) 38%, var(--cyan));
+  box-shadow: 1px 1px 20px 4px var(--cyan);
+  border-radius: 100%;
+}
+.vert {
+  border: 4px solid var(--green);
+  background: radial-gradient(rgba(0,0,0,0) 38%, var(--green));
+  box-shadow: 1px 1px 20px 4px var(--green);
+  border-radius: 100%;
+}
+
+// Responsive
+@media (max-width: 1200px) {
+  .container {
+    background: var(--dark);
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+    border: 15px solid var(--dark);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  #menu {
+    #menu {
+      button {
+        background: var(--turquoise);
+        border-radius: 8px;
+        padding: 1% 2% 1% 2%;
+        align-content: center;
+        width: 80vw;
+      }
+    }
+  }
+}
+
+// scrollbar custom
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7f7b82 rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #7f7b82;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
